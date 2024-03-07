@@ -1,0 +1,38 @@
+﻿<Window x:Class="Audioplayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Audioplayer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.23*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="Space" Content="Место хранения" Grid.ColumnSpan="3" Click="Space_Click" />
+        <Button x:Name="History" Grid.Column="3" Content="История прослушивания" Grid.ColumnSpan="3" Click="History_Click" />
+        <ListBox x:Name="ListMusic" Grid.Row="1" Grid.ColumnSpan="6" SelectionChanged="ListMusic_SelectionChanged"/>
+        <MediaElement x:Name="MediaEl" MediaEnded="MediaEl_MediaEnded" Grid.ColumnSpan="6" Grid.Row="2" LoadedBehavior="Manual" MediaOpened="MediaEl_MediaOpened"/>
+        <Slider x:Name="Slide" Grid.ColumnSpan="6" Grid.Row="2" ValueChanged="Slide_ValueChanged"/>
+        <Button x:Name="Back" Content="Назад" Grid.Row="3" Click="Back_Click"/>
+        <Button x:Name="Play" Grid.Column="1" Content="Играть" Grid.Row="3" Click="Play_Click"/>
+        <Button x:Name="Next" Grid.Column="2" Content="Вперед" Grid.Row="3" Click="Next_Click"/>
+        <Button x:Name="Repeate" Grid.Column="3" Content="Повтор" Grid.Row="3" Height="35" VerticalAlignment="Bottom" Click="Repeate_Click"/>
+        <Button x:Name="Random" Grid.Column="4" Content="Случайно" Grid.Row="3" Click="Random_Click"/>
+        <Slider x:Name="Volume" Grid.Column="5" Grid.Row="3" ValueChanged="Volume_ValueChanged"/>
+        <TextBlock x:Name="TimeF" HorizontalAlignment="Center" Margin="0,25,0,0" Grid.Row="2" TextWrapping="Wrap"  VerticalAlignment="Top" Width="105"/>
+
+    </Grid>
+</Window>
