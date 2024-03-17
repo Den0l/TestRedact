@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "H+GfLLQcisSChSLG4YMKRpD1dj4h+MokSRii8oks0n5SGMmXGb4/+LOcT31suMsYF+oeICM63fCRFErxvv5K1w==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\C#\\Tests\\Tests\\Tests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\denol.MSI\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
