@@ -26,7 +26,7 @@ namespace Tests
         {
             InitializeComponent();
             Editor_Button.IsEnabled = WhoEntry;
-            ListTests = Json.Deserilaz<List<TestClass>>();
+            if (System.IO.Path.Exists(Json.desktop)) ListTests = Json.Deserilaz<List<TestClass>>();
             editorPage.EditorGrid.ItemsSource = ListTests;
         }
 
